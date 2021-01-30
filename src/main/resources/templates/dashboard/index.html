@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="components/header::head-fragment"></head>
+<body class="drawer drawer--left">
+<header th:replace="components/header::header-fragment"></header>
+<div class="container-fluid main">
+
+  <div class="row">
+
+    <!-- Main Content -->
+    <div class="main-content col-sm-12">
+      <div class="container">
+        <div class="card w-100 article-user-info">
+          <div class="card-body">
+            <img src="test.jpg" class="article-user-info_img rounded-circle avatar-img--s">
+            <span class="article-user-info__name"  th:text="${user.name}"></span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 col-md-4">
+            <div class="user-side-menu">
+              <a href="/dashboard" class="side-menu__link">
+                <div class="icon-block">
+                  <i class="icon__post"><svg width="20pt" height="20pt" id="Capa_1" enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><g><g><path d="m382.959 66.602h-382.959v424.585c0 11.495 9.318 20.813 20.813 20.813h341.333c11.495 0 20.813-9.318 20.813-20.813z" fill="#f9f6f9"/></g><g><path d="m349.659 66.602v424.585c0 11.495-9.318 20.813-20.813 20.813h33.301c11.495 0 20.813-9.318 20.813-20.813v-424.585z" fill="#dddaec"/></g><g><path d="m362.146 0h-341.333c-11.495 0-20.813 9.318-20.813 20.813v45.789h382.959v-45.789c0-11.495-9.318-20.813-20.813-20.813z" fill="#cbafea"/></g><g><path d="m362.146 0h-33.301c11.495 0 20.813 9.318 20.813 20.813v45.789h33.301v-45.789c0-11.495-9.318-20.813-20.813-20.813z" fill="#bc95e2"/></g><g><g><path d="m31.802 236.332v-118.843c0-5.69 4.612-10.302 10.302-10.302h298.753c5.69 0 10.302 4.612 10.302 10.302v118.844c0 5.69-4.612 10.302-10.302 10.302h-298.754c-5.689-.001-10.301-4.613-10.301-10.303z" fill="#b3e59f"/></g></g></g><g><circle cx="349.659" cy="33.301" fill="#b3e59f" r="8.325"/></g><g><circle cx="316.358" cy="33.301" fill="#ffe07d" r="8.325"/></g><g><circle cx="283.057" cy="33.301" fill="#dd636e" r="8.325"/></g><g><path d="m168.586 291.824h-70.765c-4.268 0-7.726-3.459-7.726-7.726s3.459-7.726 7.726-7.726h70.765c4.268 0 7.726 3.459 7.726 7.726s-3.459 7.726-7.726 7.726z" fill="#b1e4f9"/></g><g><path d="m168.586 329.287h-133.204c-4.268 0-7.726-3.459-7.726-7.726s3.459-7.726 7.726-7.726h133.203c4.268 0 7.726 3.459 7.726 7.726.001 4.267-3.458 7.726-7.725 7.726z" fill="#b1e4f9"/></g><g><path d="m35.382 366.751c-4.268 0-7.726-3.459-7.726-7.726s3.459-7.726 7.726-7.726h133.203c4.268 0 7.726 3.459 7.726 7.726s-3.459 7.726-7.726 7.726z" fill="#b1e4f9"/></g><g><path d="m168.586 404.214h-133.204c-4.268 0-7.726-3.459-7.726-7.726s3.459-7.726 7.726-7.726h133.203c4.268 0 7.726 3.459 7.726 7.726.001 4.267-3.458 7.726-7.725 7.726z" fill="#b1e4f9"/></g><g><path d="m168.586 441.678h-133.204c-4.268 0-7.726-3.459-7.726-7.726s3.459-7.726 7.726-7.726h133.203c4.268 0 7.726 3.459 7.726 7.726.001 4.266-3.458 7.726-7.725 7.726z" fill="#b1e4f9"/></g><g><path d="m168.586 479.141h-133.204c-4.268 0-7.726-3.459-7.726-7.726s3.459-7.726 7.726-7.726h133.203c4.268 0 7.726 3.459 7.726 7.726.001 4.267-3.458 7.726-7.725 7.726z" fill="#b1e4f9"/></g><g><path d="m260.163 479.141h-45.789c-4.268 0-7.726-3.459-7.726-7.726s3.459-7.726 7.726-7.726h45.789c4.268 0 7.726 3.459 7.726 7.726s-3.458 7.726-7.726 7.726z" fill="#b1e4f9"/></g><g><path d="m273.587 441.678h-59.212c-4.268 0-7.726-3.459-7.726-7.726s3.459-7.726 7.726-7.726h59.212c4.268 0 7.726 3.459 7.726 7.726 0 4.266-3.459 7.726-7.726 7.726z" fill="#b1e4f9"/></g><g><path d="m295.44 404.214h-81.065c-4.268 0-7.726-3.459-7.726-7.726s3.459-7.726 7.726-7.726h81.065c4.268 0 7.726 3.459 7.726 7.726s-3.459 7.726-7.726 7.726z" fill="#b1e4f9"/></g><g><path d="m214.374 366.751c-4.268 0-7.726-3.459-7.726-7.726s3.459-7.726 7.726-7.726h102.92c4.268 0 7.726 3.459 7.726 7.726s-3.459 7.726-7.726 7.726z" fill="#b1e4f9"/></g><g><path d="m339.147 329.287h-124.773c-4.268 0-7.726-3.459-7.726-7.726s3.459-7.726 7.726-7.726h124.773c4.268 0 7.726 3.459 7.726 7.726s-3.459 7.726-7.726 7.726z" fill="#b1e4f9"/></g><g><path d="m357.879 291.824h-143.505c-4.268 0-7.726-3.459-7.726-7.726s3.459-7.726 7.726-7.726h143.505c4.268 0 7.726 3.459 7.726 7.726.001 4.267-3.458 7.726-7.726 7.726z" fill="#b1e4f9"/></g><g><g><g><path d="m257.663 512c-1.311 0-2.639-.334-3.856-1.037-3.695-2.133-4.962-6.859-2.828-10.554l13.5-23.384c2.133-3.696 6.856-4.962 10.554-2.828 3.695 2.133 4.962 6.859 2.828 10.554l-13.5 23.384c-1.43 2.479-4.028 3.865-6.698 3.865z" fill="#407093"/></g></g><g><g><path d="m494.639 160.431-57.679-33.301 14.569-25.234c5.747-9.955 18.476-13.365 28.431-7.618l21.63 12.488c9.955 5.747 13.365 18.476 7.618 28.431z" fill="#df75a5"/></g><g><path d="m501.59 106.765-19.827-11.447c9.955 5.747 13.365 18.476 7.618 28.431l-14.569 25.234 19.827 11.447 14.569-25.234c5.747-9.954 2.337-22.684-7.618-28.431z" fill="#dd5ca2"/></g><g><path d="m305.872 474.253-29.602 15.331c-6.743 3.492-14.835-1.18-15.182-8.765l-1.523-33.302c-.363-7.945 1.557-15.828 5.533-22.715l155.212-268.833 57.679 33.301-155.211 268.833c-3.977 6.888-9.843 12.492-16.906 16.15z" fill="#ffe07d"/></g><g><path d="m458.162 177.823-155.211 268.833c-3.977 6.888-9.843 12.492-16.905 16.15l-25.184 13.043.227 4.97c.347 7.586 8.439 12.257 15.182 8.765l29.602-15.332c7.062-3.658 12.929-9.262 16.905-16.15l155.211-268.832z" fill="#ffd064"/></g><g><path d="m479.791 190.311-61.284-35.382c-3.982-2.299-5.346-7.391-3.047-11.372l8.325-14.42c2.299-3.982 7.391-5.346 11.372-3.047l61.284 35.382c3.982 2.299 5.346 7.391 3.047 11.372l-8.325 14.42c-2.298 3.981-7.39 5.346-11.372 3.047z" fill="#4a80aa"/></g></g></g></g></svg></i>
+                  <p>投稿記事</p>
+                </div>
+              </a>
+              <a href="/dashboard/bookmark" class="side-menu__link">
+                <div class="icon-block">
+                  <i class="icon__bookmark"><svg class="bookmark-on" width="20pt" height="20pt" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><g><path d="M416.667,0H95.334c-8.284,0-15,6.716-15,15v482c0,6.067,3.655,11.536,9.26,13.858c1.856,0.769,3.805,1.142,5.737,1.142 c3.903,0,7.74-1.523,10.609-4.394l150.063-150.062L406.06,507.606c4.29,4.291,10.741,5.573,16.347,3.252 c5.605-2.322,9.26-7.791,9.26-13.858V15C431.667,6.716,424.952,0,416.667,0z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></i>
+                  <p>ブックマーク</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-8" th:if="${pathName == 'index'}">
+            <h1 class="post-title">投稿記事</h1>
+            <div class="card w-100 article-list">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item article-list-item" th:each="article : ${articleList}">
+                  <p class="article-list-item__date" th:text="${#dates.format(article.articleUpdatedAt, 'yyyy.MM.dd HH:mm')} + ' 更新'"></p>
+                  <a th:href="@{'/' + ${article.userName} + '/article/' + ${article.articleHash}}" class="article-list-item__title card-text" th:text="${article.articleTitle}"></a>
+                  <div class="article-list-item__tags">
+                    <a th:href="@{'/tags/' + ${tag.path}}" class="article-tag" th:each="tag : ${article.articleTag}" th:text="${tag.name}"></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div th:replace="components/pager"></div>
+          </div>
+          <div class="col-sm-12 col-md-8" th:if="${pathName == 'bookmark'}">
+            <h1 class="post-title">ブックマーク</h1>
+            <div class="card w-100 article-list">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item article-list-item" th:each="article : ${articleList}">
+                  <div class="article-list-item__header d-flex">
+                    <a th:href="@{'/' + ${article.userName}}"><img src="test.jpg" class="rounded-circle avatar-img--s"></a>
+                    <div>
+                      <a th:href="@{'/' + ${article.userName}}" class="avatar-name" th:text="${article.userName}"></a>
+                      <p class="article-list-item__date" th:text="${#dates.format(article.articleUpdatedAt, 'yyyy.MM.dd HH:mm')} + ' 更新'"></p>
+                    </div>
+                  </div>
+                  <a th:href="@{'/' + ${article.userName} + '/article/' + ${article.articleHash}}" class="article-list-item__title card-text" th:text="${article.articleTitle}"></a>
+                  <div class="article-list-item__tags">
+                    <a th:href="@{'/tags/' + ${tag.path}}" class="article-tag" th:each="tag : ${article.articleTag}" th:text="${tag.name}"></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div th:replace="components/pager"></div>
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </div><!-- /.Main Content -->
+
+  </div><!-- /.row -->
+
+</div>
+<script th:replace="components/scripts"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="components/header::head-fragment"></head>
+<body class="drawer drawer--left">
+<header th:replace="components/header::header-fragment"></header>
+<div class="container-fluid main">
+  <div class="row">
+    <!-- Tag Content -->
+    <div class="tag-content col-sm-12">
+      <div class="container">
+        <h1 class="tag-title text-center">タグ一覧</h1>
+        <div class="row">
+          <div class="col-sm-3 tag-item" th:each="tag : ${tagList}" >
+            <a th:href="@{'/tags/' + ${tag.path}}" th:text="${tag.name}"></a>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.Tag Content -->
+  </div>
+</div>
+<script th:replace="components/scripts"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<div class="pager">
+          <ul class="pagination2">
+            <!--/*前へ */-->
+            <li class="pre">
+              <a th:unless="${pager.isFirstPage}" th:href="@{${#httpServletRequest.requestURI} + '?page=' + ${pager.current - 1}}" ><span>«</span></a>
+              <div th:if="${pager.isFirstPage}" class="active"><span>«</span></div>
+            </li>
+            <!--/* 最初のページ */-->
+            <li class="number">
+              <a th:unless="${pager.isFirstPage}" th:href="@{${#httpServletRequest.requestURI} + '?page=1'}"><span>1</span></a>
+              <div th:if="${pager.isFirstPage}" class="active"><span>1</span></div>
+            </li>
+            <li th:if="${pager.isRoundFrontPage}">
+              <span>...</span>
+            </li>
+            <!--/* 中間ページを表示、総ページ数が2以下の場合は非表示 */-->
+            <li class="number" th:if="${pager.totalPages > 2}" th:each="i : ${#numbers.sequence(pager.navigateMidFirstPage, pager.navigateMidLastPage)}">
+              <a th:if="${pager.current != i}" th:href="@{${#httpServletRequest.requestURI} + '?page=' + ${i}}"><span th:text="${i}"></span></a>
+              <div th:if="${pager.current == i}" class="active"><span th:text="${i}"></span></a>
+            </li>
+            <li th:if="${pager.isRoundRearPage}">
+              <span>...</span>
+            </li>
+            <!--/* 最後のページ、1ページしかない場合は表示しない*/-->
+            <li class="number" th:if="${pager.totalPages > 1}">
+              <a th:if="${pager.current != pager.totalPages}" th:href="@{${#httpServletRequest.requestURI} + '?page=' + ${pager.totalPages}}"><span th:text="${pager.totalPages}"></span></a>
+              <div th:if="${pager.current == pager.totalPages}" class="active"><span th:text="${pager.totalPages}"></span></div>
+            </li>
+            <!--/*次へ */-->
+            <li class="next">
+              <a th:unless="${pager.isLastPage}" th:href="@{${#httpServletRequest.requestURI} + '?page=' + ${pager.current + 1}}"><span>»</span></a>
+              <div th:if="${pager.isLastPage}" class="active"><span>»</span></div>
+            </li>
+          </ul>
+        </div>

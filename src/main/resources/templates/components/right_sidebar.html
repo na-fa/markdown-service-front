@@ -1,0 +1,15 @@
+<!-- Right Content -->
+<div class="right-content offset-md-2 col-md-10 offset-lg-0 col-lg-3">
+  <div class="container">
+    <div class="card w-100 ranking-list">
+      <div class="card-header side-ranking-title">
+        ブックマークランキング
+      </div>
+      <div class="card-body">
+        <p th:each="bookmarkLanking : ${bookmarkLankingList}">
+          <a th:href="@{'/' + ${bookmarkLanking.user.name} + '/article/' + ${bookmarkLanking.hash}}" class="ranking__link" th:text="${bookmarkLanking.title}"></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div><!-- /.Right Content -->
